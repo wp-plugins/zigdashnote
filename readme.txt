@@ -38,3 +38,4 @@ For further information and support, please visit [the ZigDashNote home page](ht
 * Added readme.txt in preparation for submission to WordPress.org
 = 0.1 =
 * First public release
+
