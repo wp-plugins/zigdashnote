@@ -3,10 +3,10 @@
 Plugin Name: ZigDashNote
 Plugin URI: http://www.zigpress.com/wordpress/plugins/zigdashnote/
 Description: Adds a text widget to the Dashboard for notes and reminders. HTML allowed, HTML restrictions observed, URLs automatically linkified.
-Version: 0.2
+Version: 0.2.1
 Author: ZigPress
 Requires at least: 3.0
-Tested up to: 3.0.4
+Tested up to: 3.1.1
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
@@ -66,6 +66,7 @@ if (!class_exists('ZigDashNote'))
 			$this->Options = array();
 			$this->Version = '0.2';
 			add_action('wp_dashboard_setup', array($this, 'WPDashboardSetup'));
+			add_filter('plugin_row_meta', array($this, 'FilterPluginRowMeta'), 10, 2 );
 			}
 
 
@@ -135,6 +136,14 @@ if (!class_exists('ZigDashNote'))
 			<p><textarea class="widefat" rows="12" id="zigdashnote_text" name="zigdashnote_text"><?php echo $this->Options['text'] ?></textarea></p>
 			<p>Show credit: <input type="checkbox" id="zigdashnote_credit" name="zigdashnote_credit" value="1" <?php echo ($this->Options['credit'] == 1) ? 'checked="checked"' : ''?> /></p>
 			<?php
+			}
+
+
+		public function FilterPluginRowMeta($links, $file) 
+			{
+			$plugin = plugin_basename(__FILE__);
+			if ($file == $plugin) return array_merge($links, array('<a target="_blank" href="http://www.zigpress.com/donations/">Donate</a>'));
+			return $links;
 			}
 
 
