@@ -3,10 +3,10 @@
 Plugin Name: ZigDashNote
 Plugin URI: http://www.zigpress.com/plugins/zigdashnote/
 Description: Adds a text widget to the Dashboard for notes and reminders. HTML allowed, HTML restrictions observed, URLs automatically linkified.
-version: 0.3
+version: 0.3.1
 Author: ZigPress
 Requires at least: 3.1
-Tested up to: 3.4.2
+Tested up to: 3.5
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
@@ -44,7 +44,7 @@ if (!class_exists('zigdashnote')) {
 	
 		public function __construct() {
 			$this->options = array();
-			$this->version = '0.3';
+			$this->version = '0.3.1';
 			global $wp_version;
 			if (version_compare(phpversion(), '5.2.4', '<')) wp_die('ZigDashNote requires PHP 5.2.4 or newer. Please update your server.'); 
 			if (version_compare($wp_version, '3.1', '<')) $this->AutoDeactivate('ZigDashNote requires WordPress 3.1 or newer. Please update your installation.'); 

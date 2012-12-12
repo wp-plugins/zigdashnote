@@ -3,8 +3,8 @@ Contributors: ZigPress
 Donate link: http://www.zigpress.com/donations/
 Tags: dashboard, widget, admin dashboard note, dashboard text widget, note to self, post-it, postit, post it, zig, zigpress
 Requires at least: 3.1
-Tested up to: 3.4.2
-Stable tag: 0.3
+Tested up to: 3.5
+Stable tag: 0.3.1
 
 Adds an editable panel to the admin dashboard for useful notes.
 
@@ -34,6 +34,8 @@ For further information and support, please visit [the ZigDashNote home page](ht
 
 == Changelog ==
 
+= 0.3.1 =
+* Verified compatibility with WordPress 3.5
 = 0.3 =
 * Coding style improvements and refactoring
 * Updated plugin URL
