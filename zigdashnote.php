@@ -3,10 +3,10 @@
 Plugin Name: ZigDashNote
 Plugin URI: http://www.zigpress.com/plugins/zigdashnote/
 Description: Adds a text widget to the Dashboard for notes and reminders. HTML allowed, HTML restrictions observed, URLs automatically linkified.
-version: 0.3.1
+version: 0.3.2
 Author: ZigPress
-Requires at least: 3.1
-Tested up to: 3.5
+Requires at least: 3.5
+Tested up to: 3.9
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
