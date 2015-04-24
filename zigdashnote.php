@@ -3,17 +3,17 @@
 Plugin Name: ZigDashNote
 Plugin URI: http://www.zigpress.com/plugins/zigdashnote/
 Description: Adds a text widget to the Dashboard for notes and reminders. HTML allowed, HTML restrictions observed, URLs automatically linkified.
-version: 0.3.4
+version: 0.3.5
 Author: ZigPress
 Requires at least: 3.6
-Tested up to: 4.1
+Tested up to: 4.2
 Author URI: http://www.zigpress.com/
 License: GPLv2
 */
 
 
 /*
-Copyright (c) 2011-2014 ZigPress
+Copyright (c) 2011-2015 ZigPress
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -44,12 +44,16 @@ if (!class_exists('zigdashnote')) {
 	
 		public function __construct() {
 			$this->options = array();
-			$this->version = '0.3.3';
+			$this->version = '0.3.5';
 			global $wp_version;
-			if (version_compare(phpversion(), '5.2.4', '<')) wp_die('ZigDashNote requires PHP 5.2.4 or newer. Please update your server.'); 
+			if (version_compare(phpversion(), '5.3', '<')) wp_die('ZigDashNote requires PHP 5.3 or newer. Please update your server.');
 			if (version_compare($wp_version, '3.6', '<')) $this->AutoDeactivate('ZigDashNote requires WordPress 3.6 or newer. Please update your installation.'); 
 			add_action('wp_dashboard_setup', array($this, 'action_wp_dashboard_setup'));
 			add_filter('plugin_row_meta', array($this, 'filter_plugin_row_meta'), 10, 2 );
+			/* That which can be added without discussion, can be removed without discussion. */
+			remove_filter('the_title', 'capital_P_dangit', 11);
+			remove_filter('the_content', 'capital_P_dangit', 11);
+			remove_filter('comment_text', 'capital_P_dangit', 31);
 		}
 	
 	

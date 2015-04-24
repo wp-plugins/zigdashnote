@@ -3,12 +3,14 @@ Contributors: ZigPress
 Donate link: http://www.zigpress.com/donations/
 Tags: dashboard, widget, admin dashboard note, dashboard text widget, note to self, post-it, postit, post it, zig, zigpress
 Requires at least: 3.6
-Tested up to: 4.1
-Stable tag: 0.3.4
+Tested up to: 4.2
+Stable tag: 0.3.5
 
 Adds an editable panel to the admin dashboard for useful notes.
 
 == Description ==
+
+NOTE: ZIGDASHNOTE NOW REQUIRES PHP 5.3!
 
 ZigDashNote gives you a simple editable panel on the admin dashboard, where you can leave notes for yourself and fellow admins. 
 
@@ -32,6 +34,9 @@ For further information and support, please visit [the ZigDashNote home page](ht
 
 == Changelog ==
 
+= 0.3.5 =
+* Confirmed compatibility with WordPress 4.2
+* Increased minimum PHP version to 5.3 in accordance with ZigPress policy of gradually dropping support for deprecated platforms
 = 0.3.4 =
 * Confirmed compatibility with WordPress 4.1
 * Minimum compatible version raised to 3.6
